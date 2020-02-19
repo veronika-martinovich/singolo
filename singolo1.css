@@ -1,0 +1,139 @@
+/* ------------------CSS styles reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a:not {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* ------------------Fonts */
+
+@font-face {
+  font-family: "Lato Light";
+  src: url(assets/fonts/lato/Lato-Light.ttf);
+}
+
+/* ------------------Header styles */
+
+body {
+  font-family: "Lato Light";
+}
+/* ------------------Header styles */
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1020px;
+  padding-left: 40px;
+  padding-right: 40px;
+  height: 90px;
+  margin: 0 auto;
+  background-color: #2d303a;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.header__logo {
+  font-size: 25px;
+  /* margin-left: 40px; */
+  letter-spacing: 0px;
+}
+
+.header__logo span {
+  color: #f06c64;
+}
+
+.header__nav-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 371px;
+  margin-top: 7px;
+}
+
+.header__nav-item {
+  font-size: 12px;
+}
+
+.header__nav-item:not(:last-child)::after {
+  content: "\25CF";
+  color: #464952;
+  font-size: 5px;
+  margin-left: 14px;
+}
+
+.header__nav-item a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.header__nav-item:first-child a {
+  color: #f06c64;
+}
+
+.header__bottom-line {
+  margin: 0 auto;
+  max-width: 1020px;
+  height: 6px;
+  background-color: #323746;
+}
+
+
+
+
