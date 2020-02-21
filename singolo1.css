@@ -222,6 +222,7 @@ h3 {
 }
 
 .our-service__description {
+  width: 100%;
   font-size: 1.8rem;
   color: #767e9e;
   line-height: 3rem;
@@ -242,7 +243,6 @@ h3 {
   flex-flow: column wrap;
   width: 300px;
   height: 90px;
-  /* letter-spacing: 0.01rem; */
 }
 
 .service:not(:nth-child(3n)) {
@@ -251,12 +251,13 @@ h3 {
 
 .service__description {
   width: 220px;
-  height: 58px;
+  height: 60px;
   margin-top: 10px;
   font-family: 'Lato Regular', Verdana, sans-serif;
   line-height: 2.2rem;
   color: #767e9e;
   font-weight: 400;
+  overflow: hidden;
 }
 
 .service__icon {
@@ -297,6 +298,3 @@ h3 {
 .our-services .bottom-line {
   background-color: #ffffff;
 }
-
-/* ------------------Layout 3 column */
-
