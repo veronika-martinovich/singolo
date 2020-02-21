@@ -60,16 +60,25 @@ select {
 @font-face {
   font-family: 'Lato Light';
   src: url('assets/fonts/lato/Lato-Light.ttf');
+  font-weight: 300;
 }
 
 @font-face {
   font-family: 'Lato Regular';
   src: url('assets/fonts/lato/Lato-Regular.ttf');
+  font-weight: 400;
 }
 
 @font-face {
-  font-family: 'Lato Heavy';
-  src: url('assets/fonts/lato/Lato-Heavy.ttf');
+  font-family: 'Lato Bold';
+  src: url('assets/fonts/lato/Lato-Bold.ttf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Lato Black';
+  src: url('assets/fonts/lato/Lato-Black.ttf');
+  font-weight: 900;
 }
 
 /* ------------------Common styles */
@@ -84,22 +93,18 @@ body {
 }
 
 h1 {
-  font-family: 'Lato Heavy', Verdana, sans-serif;
+  font-family: 'Lato Black', Verdana, sans-serif;
   font-size: 3rem;
   color: #666d89;
-  font-weight: 900;
   line-height: 1.8rem;
 }
 
 h3 {
-  font-family: 'Lato Heavy', Verdana, sans-serif;
+  font-family: 'Lato Black', Verdana, sans-serif;
   font-size: 1.8rem;
   color: #666d89;
-  font-weight: 900;
   line-height: 1.8rem;
 }
-
-/* ------------------Wrapper styles */
 
 .wrapper {
   max-width: 1020px;
@@ -120,8 +125,9 @@ h3 {
   justify-content: space-between;
   align-items: center;
   height: 90px;
-  text-transform: uppercase;
+  font-family: 'Lato Light';
   font-weight: 700;
+  text-transform: uppercase;
   color: #ffffff;
 }
 
@@ -198,7 +204,7 @@ h3 {
 }
 
 .ico_chevron {
-  display: block;
+  display: inline-block;
   width: 16px;
   height: 27px;
   cursor: pointer;
@@ -232,7 +238,6 @@ h3 {
   font-size: 1.8rem;
   color: #767e9e;
   line-height: 3rem;
-  font-weight: 300;
   margin-top: 30px;
   margin-bottom: 45px;
 }
@@ -262,7 +267,6 @@ h3 {
   font-family: 'Lato Regular', Verdana, sans-serif;
   line-height: 2.2rem;
   color: #767e9e;
-  font-weight: 400;
   overflow: hidden;
 }
 
@@ -272,7 +276,7 @@ h3 {
 }
 
 .service__icon .ico {
-  display: block;
+  display: inline-block;
   width: 61px;
   height: 61px;
 }
