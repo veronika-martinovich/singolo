@@ -39,10 +39,6 @@ ol {
   list-style: none;
 }
 
-a:not {
-  text-decoration-skip-ink: auto;
-}
-
 img {
   width: 100%;
   display: block;
@@ -62,22 +58,55 @@ select {
 /* ------------------Fonts */
 
 @font-face {
-  font-family: "Lato Light";
-  src: url(assets/fonts/lato/Lato-Light.ttf);
+  font-family: 'Lato Light';
+  src: url('assets/fonts/lato/Lato-Light.ttf');
 }
 
-/* ------------------Body styles */
+@font-face {
+  font-family: 'Lato Regular';
+  src: url('assets/fonts/lato/Lato-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Lato Heavy';
+  src: url('assets/fonts/lato/Lato-Heavy.ttf');
+}
+
+/* ------------------Common styles */
+
+html {
+  font-size: 10px;
+}
 
 body {
-  font-family: "Lato Light";
+  font-family: 'Lato Light', Verdana, sans-serif;
+  font-size: 1.2rem;
+}
+
+h1 {
+  font-family: 'Lato Heavy', Verdana, sans-serif;
+  font-size: 3rem;
+  color: #666d89;
+  font-weight: 900;
+  line-height: 1.8rem;
+}
+
+h3 {
+  font-family: 'Lato Heavy', Verdana, sans-serif;
+  font-size: 1.8rem;
+  color: #666d89;
+  font-weight: 900;
+  line-height: 1.8rem;
+}
+
+.bottom-line {
+  height: 6px;
 }
 
 /* ------------------Wrapper styles */
 
-.header__wrapper,
-.header__bottom-line,
-.slider__wrapper,
-.slider__bottom-line {
+.wrapper,
+.bottom-line {
   max-width: 1020px;
   margin: 0 auto;
   padding-left: 40px;
@@ -86,7 +115,7 @@ body {
 
 /* ------------------Header styles */
 
-.header__wrapper {
+.header .wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -98,17 +127,15 @@ body {
   color: #ffffff;
 }
 
-.header__logo {
-  font-size: 25px;
-  letter-spacing: 0px;
-  cursor: pointer;
+.logo {
+  font-size: 2.5rem;
 }
 
-.header__logo span {
+.logo span {
   color: #f06c64;
 }
 
-.header__nav-list {
+.nav-list {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -116,35 +143,33 @@ body {
   margin-top: 7px;
 }
 
-.header__nav-item {
-  font-size: 12px;
+.nav-list__nav-item {
   cursor: pointer;
 }
 
-.header__nav-item:not(:last-child)::after {
+.nav-list__nav-item:not(:last-child)::after {
   content: "\25CF";
   color: #464952;
-  font-size: 5px;
+  font-size: 0.5rem;
   margin-left: 14px;
 }
 
-.header__nav-item a {
+.nav-list__nav-item a {
   text-decoration: none;
   color: #ffffff;
 }
 
-.header__nav-item:first-child a {
+.nav-list__nav-item:first-child a {
   color: #f06c64;
 }
 
-.header__bottom-line {
-  height: 6px;
+.header .bottom-line {
   background-color: #323746;
 }
 
 /* ------------------Slider styles */
 
-.slider__wrapper {
+.slider .wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -154,34 +179,124 @@ body {
   padding-bottom: 9px;
 }
 
-.slider__phone-vertical {
+.phone_vertical {
   width: 240px;
   height: 483px;
   margin-right: 18px;
 }
 
-.slider__phone-horizontal {
+.phone_horizontal {
   width: 483px;
   height: 240px;
 }
 
-.slider__bottom-line {
-  height: 6px;
+.slider .bottom-line {
   background-color: #ea676b;
+}
+
+.ico_chevron {
+  display: block;
+  width: 16px;
+  height: 27px;
+  cursor: pointer;
 }
 
 .ico_chevron-left {
   background-image: url('assets/images/chevron-left.svg');
-  width: 16px;
-  height: 27px;
 }
 
 .ico_chevron-right {
   background-image: url('assets/images/chevron-right.svg');
-  width: 16px;
-  height: 27px;
 }
 
+/* ------------------Our Services styles */
 
+.our-services .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 495px;
+  background-color: #f2f2f2;
+  padding-top: 67px;
+}
 
+.our-service__description {
+  font-size: 1.8rem;
+  color: #767e9e;
+  line-height: 3rem;
+  font-weight: 300;
+  margin-top: 30px;
+  margin-bottom: 45px;
+}
+
+.layout-3-column {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 940px;
+  height: 245px;
+}
+
+.service {
+  display: flex;
+  flex-flow: column wrap;
+  width: 300px;
+  height: 90px;
+  /* letter-spacing: 0.01rem; */
+}
+
+.service:not(:nth-child(3n)) {
+  margin-right: 20px;
+}
+
+.service__description {
+  width: 220px;
+  height: 58px;
+  margin-top: 10px;
+  font-family: 'Lato Regular', Verdana, sans-serif;
+  line-height: 2.2rem;
+  color: #767e9e;
+  font-weight: 400;
+}
+
+.service__icon {
+  height: 100%;
+  margin-right: 20px;
+}
+
+.service__icon .ico {
+  display: block;
+  width: 61px;
+  height: 61px;
+}
+
+.ico_pen {
+  background-image: url('assets/images/pen.svg');
+}
+
+.ico_bulb {
+  background-image: url('assets/images/bulb.svg');
+}
+
+.ico_heart {
+  background-image: url('assets/images/heart.svg');
+}
+
+.ico_phone {
+  background-image: url('assets/images/phone.svg');
+}
+
+.ico_bubble {
+  background-image: url('assets/images/bubble.svg');
+}
+
+.ico_star {
+  background-image: url('assets/images/star.svg');
+}
+
+.our-services .bottom-line {
+  background-color: #ffffff;
+}
+
+/* ------------------Layout 3 column */
 

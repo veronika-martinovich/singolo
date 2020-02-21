@@ -7,31 +7,93 @@
   <link rel="stylesheet" href="singolo1.css">
 </head>
 <body>
+
   <header class="header">
-    <div class="header__wrapper">
-      <h1 class="header__logo">Singolo<span>*</span></h1>
+    <div class="wrapper">
+      <p class="logo">Singolo<span>*</span></p>
       <nav class="header__nav">
-        <ul class="header__nav-list">
-          <li class="header__nav-item"><a href="#">Home</a></li>
-          <li class="header__nav-item"><a href="#">Services</a></li>
-          <li class="header__nav-item"><a href="#">Portfolio</a></li>
-          <li class="header__nav-item"><a href="#">About</a></li>
-          <li class="header__nav-item"><a href="#">Contact</a></li>
+        <ul class="nav-list">
+          <li class="nav-list__nav-item"><a href="#">Home</a></li>
+          <li class="nav-list__nav-item"><a href="#">Services</a></li>
+          <li class="nav-list__nav-item"><a href="#">Portfolio</a></li>
+          <li class="nav-list__nav-item"><a href="#">About</a></li>
+          <li class="nav-list__nav-item"><a href="#">Contact</a></li>
         </ul>
       </nav>
     </div>
-    <div class="header__bottom-line"></div>
+    <div class="bottom-line"></div>
   </header>
 
-  <section class="slider">
-    <div class="slider__wrapper">
-      <span class="ico ico_chevron-left"></span>
-      <img class="slider__phone-vertical" src="assets/images/iPhone Vertical.png" alt="Phone image vertical">
-      <img class="slider__phone-horizontal" src="assets/images/iPhone Horizontal.png" alt="Phone image horizontal">
-      <span class="ico ico_chevron-right"></span>
+  <div class="slider">
+    <div class="wrapper">
+      <span class="ico ico_chevron ico_chevron-left"></span>
+      <img class="phone phone_vertical" src="assets/images/iPhone_Vertical.png" alt="Phone image vertical">
+      <img class="phone phone_horizontal" src="assets/images/iPhone_Horizontal.png" alt="Phone image horizontal">
+      <span class="ico ico_chevron ico_chevron-right"></span>
     </div>
-    <div class="slider__bottom-line"></div>
-  </section>
-  
+    <div class="bottom-line"></div>
+  </div>
+
+  <main>
+    <section class="our-services">
+      <div class="wrapper">
+        <h1 class="our-services__heading">Our Services</h1>
+        <p class="our-service__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+        <div class="layout-3-column">
+
+          <div class="service">
+            <div class="service__icon">
+              <span class="ico ico_pen"></span>
+            </div>
+            <h3 class="service__heading">Custom Design</h3>
+            <p class="service__description">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
+          </div>
+
+          <div class="service">
+            <div class="service__icon">
+              <span class="ico ico_bulb"></span>
+            </div>
+            <h3 class="service__heading">Inovative Ideas</h3>
+            <p class="service__description">Quisque luctus, quam eget molestie com- modo, lacus purus cursus ourus, nec rutrum tellus dolor id lorem.</p>
+          </div>
+
+          <div class="service">
+            <div class="service__icon">
+              <span class="ico ico_heart"></span>
+            </div>
+            <h3 class="service__heading">Love Is The Answer</h3>
+            <p class="service__description">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
+          </div>
+
+          <div class="service">
+            <div class="service__icon">
+              <span class="ico ico_phone"></span>
+            </div>
+            <h3 class="service__heading">Responsive Layout</h3>
+            <p class="service__description">Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Prae- sent elit leo.</p>
+          </div>
+
+          <div class="service">
+            <div class="service__icon">
+              <span class="ico ico_bubble"></span>
+            </div>
+            <h3 class="service__heading">24 / 7 Support</h3>
+            <p class="service__description">Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a semerat. Pellen- tesque egestas venenatis lorem.</p>
+          </div>
+
+          <div class="service">
+            <div class="service__icon">
+              <span class="ico ico_star"></span>
+            </div>
+            <h3 class="service__heading">Feel Like A Star</h3>
+            <p class="service__description">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.</p>
+          </div>
+          
+        </div>
+      </div>
+      <div class="bottom-line"></div>
+    </section>
+  </main> 
+
 </body>
 </html>
