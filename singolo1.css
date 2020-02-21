@@ -99,14 +99,9 @@ h3 {
   line-height: 1.8rem;
 }
 
-.bottom-line {
-  height: 6px;
-}
-
 /* ------------------Wrapper styles */
 
-.wrapper,
-.bottom-line {
+.wrapper {
   max-width: 1020px;
   margin: 0 auto;
   padding-left: 40px;
@@ -115,13 +110,16 @@ h3 {
 
 /* ------------------Header styles */
 
-.header .wrapper {
+.header {
+  background-color: #2d303a;
+}
+
+.header__wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   height: 90px;
-  background-color: #2d303a;
   text-transform: uppercase;
   font-weight: 700;
   color: #ffffff;
@@ -163,19 +161,23 @@ h3 {
   color: #f06c64;
 }
 
-.header .bottom-line {
+.header__bottom-line {
   background-color: #323746;
+  height: 6px;
 }
 
 /* ------------------Slider styles */
 
-.slider .wrapper {
+.slider {
+  background-color: #f06c64;
+}
+
+.slider__wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   height: 594px;
-  background-color: #f06c64;
   padding-bottom: 9px;
 }
 
@@ -190,8 +192,9 @@ h3 {
   height: 240px;
 }
 
-.slider .bottom-line {
+.slider__bottom-line {
   background-color: #ea676b;
+  height: 6px;
 }
 
 .ico_chevron {
@@ -211,13 +214,16 @@ h3 {
 
 /* ------------------Our Services styles */
 
-.our-services .wrapper {
+.our-services {
+  background-color: #f2f2f2;
+}
+
+.our-services__wrapper {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   height: 495px;
-  background-color: #f2f2f2;
   padding-top: 67px;
 }
 
@@ -295,6 +301,7 @@ h3 {
   background-image: url('assets/images/star.svg');
 }
 
-.our-services .bottom-line {
+.our-services__bottom-line {
   background-color: #ffffff;
+  height: 6px;
 }
