@@ -190,7 +190,6 @@ h3 {
 .project {
   width: 220px;
   height: 187px;
-  overflow: hidden;
   background-size: cover;
 }
 
@@ -200,8 +199,6 @@ h3 {
 
 .project_2 {
   background-image: url('./assets/images/projects/project_2.png');
-  background-position: 57% 51%;
-  background-size: 165% 139%;
 }
 
 .project_3 {
@@ -222,14 +219,10 @@ h3 {
 
 .project_7 {
   background-image: url('./assets/images/projects/project_7.png');
-  background-position: 20% 20%;
-  background-size: 165% 194%;
 }
 
 .project_8 {
   background-image: url('./assets/images/projects/project_8.png');
-  background-position: 40% 34%;
-  background-size: 130% 145%;
 }
 
 .project_9 {
@@ -238,14 +231,10 @@ h3 {
 
 .project_10 {
   background-image: url('./assets/images/projects/project_10.png');
-  background-position: 52% 20%;
-  background-size: 260% 300%;
 }
 
 .project_11 {
   background-image: url('./assets/images/projects/project_11.png');
-  background-position: 75% 78%;
-  background-size: 185% 212%;
 }
 
 .project_12 {
