@@ -1,0 +1,339 @@
+/* ------------------CSS styles reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* ------------------Fonts */
+
+@font-face {
+  font-family: 'Lato Light';
+  src: url('assets/fonts/lato/Lato-Light.ttf');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Lato Regular';
+  src: url('assets/fonts/lato/Lato-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Lato Bold';
+  src: url('assets/fonts/lato/Lato-Bold.ttf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Lato Black';
+  src: url('assets/fonts/lato/Lato-Black.ttf');
+  font-weight: 900;
+}
+
+/* ------------------Common styles */
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Lato Light', Verdana, sans-serif;
+  font-size: 1.2rem;
+  color: #767e9e;
+}
+
+.wrapper {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.bottom-line {
+  height: 6px;
+}
+
+h1 {
+  font-family: 'Lato Black', Verdana, sans-serif;
+  font-size: 3rem;
+  color: #666d89;
+  line-height: 1.8rem;
+}
+
+h3 {
+  font-family: 'Lato Black', Verdana, sans-serif;
+  font-size: 1.8rem;
+  color: #666d89;
+  line-height: 1.8rem;
+}
+
+.layout-3-column {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 940px;
+}
+
+.layout-4-column {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 940px;
+}
+
+.ico {
+  display: inline-block;
+}
+
+/* ------------------Portfolio styles */
+
+.portfolio {
+  background-color: #2d303a;
+}
+
+.portfolio__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 863px;
+  padding-top: 70px;
+}
+
+.portfolio__description {
+  width: 100%;
+  font-size: 1.8rem;
+  line-height: 3rem;
+  margin-top: 27px;
+}
+
+.portfolio__tags {
+  height: 22px;
+  width: 296px;
+  margin-top: 11px;
+  margin-bottom: 19px;
+}
+
+.tag {
+  display: inline-block;
+  height: 21px;
+  border: 1px solid #666d89;
+  border-radius: 5px;
+  font-family: 'Lato Regular';
+  font-size: 1.2rem;
+  padding: 0 7px;
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+.tag_active {
+  color: #c5c5c5;
+  border: 1px solid #c5c5c5;
+}
+
+.portfolio__layout-4-column {
+  height: 620px;
+  overflow: hidden;
+}
+
+.project {
+  width: 220px;
+  height: 187px;
+  overflow: hidden;
+  background-size: cover;
+}
+
+.project_1 {
+  background-image: url('./assets/images/projects/project_1.png');
+}
+
+.project_2 {
+  background-image: url('./assets/images/projects/project_2.png');
+  background-position: 57% 51%;
+  background-size: 165% 139%;
+}
+
+.project_3 {
+  background-image: url('./assets/images/projects/project_3.png');
+}
+
+.project_4 {
+  background-image: url('./assets/images/projects/project_4.png');
+}
+
+.project_5 {
+  background-image: url('./assets/images/projects/project_5.png');
+}
+
+.project_6 {
+  background-image: url('./assets/images/projects/project_6.png');
+}
+
+.project_7 {
+  background-image: url('./assets/images/projects/project_7.png');
+  background-position: 20% 20%;
+  background-size: 165% 194%;
+}
+
+.project_8 {
+  background-image: url('./assets/images/projects/project_8.png');
+  background-position: 40% 34%;
+  background-size: 130% 145%;
+}
+
+.project_9 {
+  background-image: url('./assets/images/projects/project_9.png');
+}
+
+.project_10 {
+  background-image: url('./assets/images/projects/project_10.png');
+  background-position: 52% 20%;
+  background-size: 260% 300%;
+}
+
+.project_11 {
+  background-image: url('./assets/images/projects/project_11.png');
+  background-position: 75% 78%;
+  background-size: 185% 212%;
+}
+
+.project_12 {
+  background-image: url('./assets/images/projects/project_12.png');
+}
+
+.portfolio__bottom-line {
+  background-color: #323746;
+}
+
+/* ------------------About us styles */
+
+.about-us {
+  background-color: #f2f2f2;
+}
+
+.about-us__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-top: 70px;
+  height: 728px;
+}
+
+.about-us__description {
+  width: 100%;
+  font-size: 1.8rem;
+  line-height: 3rem;
+  margin-top: 27px;
+  margin-bottom: 25px;
+}
+
+.employee {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding-top: 20px;
+}
+
+.employee__photo {
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  margin-bottom: 18px;
+}
+
+.employee__name {
+  display: inline-block;
+  margin-bottom: 10px;
+  max-height: 18px;
+  overflow: hidden;
+}
+
+.employee__about {
+  font-family: 'Lato Regular';
+  line-height: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.employee__social-media {
+  display: flex;
+  justify-content: space-between;
+  width: 154px;
+}
+
+.employee__social-media .ico {
+  width: 34px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.ico_facebook {
+  background-image: url('assets/images/social_media/Facebook.svg');
+}
+
+.ico_google {
+  background-image: url('assets/images/social_media/Google.svg');
+}
+
+.ico_twitter {
+  background-image: url('assets/images/social_media/Twitter.svg');
+}
+
+.ico_linkedin {
+  background-image: url('assets/images/social_media/LinkedIn.svg');
+}
+
+.about-us__bottom-line {
+  background-color: #ffffff;
+}

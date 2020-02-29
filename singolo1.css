@@ -90,6 +90,7 @@ html {
 body {
   font-family: 'Lato Light', Verdana, sans-serif;
   font-size: 1.2rem;
+  color: #767e9e;
 }
 
 h1 {
@@ -111,6 +112,21 @@ h3 {
   margin: 0 auto;
   padding-left: 40px;
   padding-right: 40px;
+}
+
+.bottom-line {
+  height: 6px;
+}
+
+.layout-3-column {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  max-width: 940px;
+}
+
+.ico {
+  display: inline-block;
 }
 
 /* ------------------Header styles */
@@ -169,7 +185,6 @@ h3 {
 
 .header__bottom-line {
   background-color: #323746;
-  height: 6px;
 }
 
 /* ------------------Slider styles */
@@ -198,24 +213,22 @@ h3 {
   height: 240px;
 }
 
-.slider__bottom-line {
-  background-color: #ea676b;
-  height: 6px;
-}
-
 .ico_chevron {
-  display: inline-block;
   width: 16px;
   height: 27px;
   cursor: pointer;
 }
 
 .ico_chevron-left {
-  background-image: url('assets/images/chevron-left.svg');
+  background-image: url('assets/images/slider/chevron-left.svg');
 }
 
 .ico_chevron-right {
-  background-image: url('assets/images/chevron-right.svg');
+  background-image: url('assets/images/slider/chevron-right.svg');
+}
+
+.slider__bottom-line {
+  background-color: #ea676b;
 }
 
 /* ------------------Our Services styles */
@@ -236,16 +249,12 @@ h3 {
 .our-service__description {
   width: 100%;
   font-size: 1.8rem;
-  color: #767e9e;
   line-height: 3rem;
   margin-top: 30px;
   margin-bottom: 45px;
 }
 
-.layout-3-column {
-  display: flex;
-  flex-flow: row wrap;
-  max-width: 940px;
+.our-services__layout-3-column {
   height: 245px;
 }
 
@@ -256,17 +265,12 @@ h3 {
   height: 90px;
 }
 
-.service:not(:nth-child(3n)) {
-  margin-right: 20px;
-}
-
 .service__description {
   width: 220px;
   height: 60px;
   margin-top: 10px;
   font-family: 'Lato Regular', Verdana, sans-serif;
   line-height: 2.2rem;
-  color: #767e9e;
   overflow: hidden;
 }
 
@@ -276,36 +280,34 @@ h3 {
 }
 
 .service__icon .ico {
-  display: inline-block;
   width: 61px;
   height: 61px;
 }
 
 .ico_pen {
-  background-image: url('assets/images/pen.svg');
+  background-image: url('assets/images/services/pen.svg');
 }
 
 .ico_bulb {
-  background-image: url('assets/images/bulb.svg');
+  background-image: url('assets/images/services/bulb.svg');
 }
 
 .ico_heart {
-  background-image: url('assets/images/heart.svg');
+  background-image: url('assets/images/services/heart.svg');
 }
 
 .ico_phone {
-  background-image: url('assets/images/phone.svg');
+  background-image: url('assets/images/services/phone.svg');
 }
 
 .ico_bubble {
-  background-image: url('assets/images/bubble.svg');
+  background-image: url('assets/images/services/bubble.svg');
 }
 
 .ico_star {
-  background-image: url('assets/images/star.svg');
+  background-image: url('assets/images/services/star.svg');
 }
 
 .our-services__bottom-line {
   background-color: #ffffff;
-  height: 6px;
 }
