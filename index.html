@@ -5,39 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Singolo</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
 </head>
 <body>
 
   <header class="header">
     <div class="wrapper header__wrapper">
-      <p class="logo">Singolo<span>*</span></p>
+      <h1 class="logo">Singolo<span>*</span></h1>
       <nav class="header__nav">
         <ul class="nav-list">
-          <li class="nav-list__nav-item"><a href="#">Home</a></li>
-          <li class="nav-list__nav-item"><a href="#">Services</a></li>
-          <li class="nav-list__nav-item"><a href="#">Portfolio</a></li>
-          <li class="nav-list__nav-item"><a href="#">About</a></li>
-          <li class="nav-list__nav-item"><a href="#">Contact</a></li>
+          <li class="nav-list__nav-item"><a href="#home-anchor" class="nav-link nav-link_active">Home</a></li>
+          <li class="nav-list__nav-item"><a href="#services-anchor" class="nav-link">Services</a></li>
+          <li class="nav-list__nav-item"><a href="#portfolio-anchor" class="nav-link">Portfolio</a></li>
+          <li class="nav-list__nav-item"><a href="#about-anchor" class="nav-link">About</a></li>
+          <li class="nav-list__nav-item"><a href="#contact-anchor" class="nav-link">Contact</a></li>
         </ul>
       </nav>
     </div>
     <div class="bottom-line header__bottom-line"></div>
   </header>
 
-  <div class="slider">
+  <div class="slider" id="home-anchor">
     <div class="wrapper slider__wrapper">
       <span class="ico ico_chevron ico_chevron-left"></span>
-      <img class="phone phone_vertical" src="assets/images/slider/iPhone_Vertical.png" alt="Phone image vertical">
-      <img class="phone phone_horizontal" src="assets/images/slider/iPhone_Horizontal.png" alt="Phone image horizontal">
+      <div class="slide slide_pink slide_active">
+        <img class="phone phone_yellow" src="assets/images/slider/iphone_yellow.png" alt="Phone image vertical">
+        <div class="screen-overlay screen-overlay_yellow"></div>
+        <div class="button-overlay button-overlay_yellow"></div>
+        <img class="phone phone_blue" src="assets/images/slider/iphone_blue.png" alt="Phone image horizontal">
+        <div class="screen-overlay screen-overlay_blue"></div>
+        <div class="button-overlay button-overlay_blue"></div>
+      </div>
+      <div class="slide slide_blue">
+        <img class="phone phone_disabled-left" src="assets/images/slider/iphone_disabled.png" alt="Phone image vertical">
+        <img class="phone phone_green" src="assets/images/slider/iphone_green.png" alt="Phone image vertical">
+        <img class="phone phone_disabled-right" src="assets/images/slider/iphone_disabled.png" alt="Phone image vertical">
+      </div>
       <span class="ico ico_chevron ico_chevron-right"></span>
     </div>
     <div class="bottom-line slider__bottom-line"></div>
   </div>
 
   <main>
-    <section class="our-services">
+    <section class="our-services" id="services-anchor">
       <div class="wrapper our-services__wrapper">
-        <h1 class="our-services__heading">Our Services</h1>
+        <h2 class="our-services__heading">Our Services</h2>
         <p class="our-service__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
         <div class="layout-3-column our-services__layout-3-column">
 
@@ -94,9 +106,9 @@
       <div class="bottom-line our-services__bottom-line"></div>
     </section>
 
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio-anchor">
       <div class="wrapper portfolio__wrapper">
-        <h1 class="portfolio__heading">Portfolio</h1>
+        <h2 class="portfolio__heading">Portfolio</h2>
         <p class="portfolio__description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
         <div class="portfolio__tags">
           <span class="tag tag_active">All</span>
@@ -105,26 +117,14 @@
           <span class="tag">Artwork</span>
         </div>
         <div class="layout-4-column  portfolio__layout-4-column">
-          <div class="portfolio__project project_1"></div>
-          <div class="portfolio__project project_2"></div>
-          <div class="portfolio__project project_3"></div>
-          <div class="portfolio__project project_4"></div>
-          <div class="portfolio__project project_5"></div>
-          <div class="portfolio__project project_6"></div>
-          <div class="portfolio__project project_7"></div>
-          <div class="portfolio__project project_8"></div>
-          <div class="portfolio__project project_9"></div>
-          <div class="portfolio__project project_10"></div>
-          <div class="portfolio__project project_11"></div>
-          <div class="portfolio__project project_12"></div>   
         </div>
       </div>
       <div class="bottom-line portfolio__bottom-line"></div>
     </section>
 
-    <section class="about-us">
+    <section class="about-us" id="about-anchor">
       <div class="wrapper about-us__wrapper">
-        <h1 class="about-us__heading">About Us</h1>
+        <h2 class="about-us__heading">About Us</h2>
         <p class="about-us__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
         <div class="layout-3-column about-us__layout-3-column">
           <div class="employee">
@@ -167,19 +167,19 @@
       <div class="bottom-line about-us__bottom-line"></div>
     </section>
 
-    <section class="get-quote">
+    <section class="get-quote" id="contact-anchor">
       <div class="wrapper get-quote__wrapper">
-        <h1 class="get-quote__heading">Get a Quote</h1>
+        <h2 class="get-quote__heading">Get a Quote</h2>
         <p class="get-quote__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
         <div class="layout-2-column get-quote__layout-2-column">
           <div class="get-quote__form">
-            <form action="" method="POST">
+            <form action="#" method="POST">
               <input type="text" required placeholder="Name (Required)">
               <input type="email" required placeholder="Email (Required)">
-              <input type="text" placeholder="Subject">
-              <textarea cols="30" rows="10" placeholder="Describe your project in detail..."></textarea>
+              <input type="text" placeholder="Subject" class="subject">
+              <textarea cols="30" rows="10" placeholder="Describe your project in detail..." class="details" maxlength="390"></textarea>
               <div class="get-quote__button">
-                <button type="submit" class="button">Send</button>
+                <button type="submit" class="button button_primary">Send</button>
               </div>
             </form>
           </div>
