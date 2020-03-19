@@ -277,7 +277,14 @@ a {
 
 .slider {
   padding-top: 96px;
-  background-color: #2d303a;
+}
+
+.slider_bg_pink {
+  background-color: #f06c64;
+}
+
+.slider_bg_blue {
+  background-color: #648bf0;
 }
 
 .slider__wrapper {
@@ -583,6 +590,12 @@ a {
 .tag_active {
   color: #c5c5c5;
   border: 1px solid #c5c5c5;
+}
+
+.portfolio__layout-4-column:after {
+  content: '';
+  display: block;
+  width: 220px; 
 }
 
 .portfolio__project {

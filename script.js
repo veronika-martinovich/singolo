@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", function() {
   let navList = document.querySelector(".nav-list");
   let navLinks = document.querySelectorAll(".nav-link");
   let header = document.querySelector(".header");
+  let sliderSection = document.querySelector(".slider");
+  let slides = document.querySelectorAll(".slide");
   let phoneButtonYellow = document.querySelector(".button-overlay_yellow");
   let phoneScreenYellow = document.querySelector(".screen-overlay_yellow");
   let phoneButtonBlue = document.querySelector(".button-overlay_blue");
@@ -35,12 +37,21 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   }
 
+  function styleScrolledItems(scrolledItem, array, classes) {
+    array.forEach(item => {
+      item.classList.remove(classes);
+    });
+    scrolledItem.classList.add(classes);
+  }
+
   // Header
   navList.addEventListener("click", function(e) {
     styleClickedItems("A", navLinks, "nav-link_active", e);
   });
 
   window.addEventListener("scroll", hideHeader);
+  window.addEventListener("scroll", styleScrolledNavLinks);
+
   let lastScroll = 0;
   function hideHeader() {
     let currentScroll = window.pageYOffset;
@@ -55,8 +66,48 @@ document.addEventListener("DOMContentLoaded", function() {
     lastScroll = currentScroll;
   }
 
+  function styleScrolledNavLinks() {
+    const headerHeight = 96;
+    let homeSectionHeight = document.querySelector(".slider").offsetHeight;
+    let servicesSectionHeight = document.querySelector(".our-services").offsetHeight;
+    let portfolioSectionHeight = document.querySelector(".portfolio").offsetHeight;
+    let aboutSectionHeight = document.querySelector(".about-us").offsetHeight;
+
+    let navLinkHome = document.querySelector(".nav-link_home");
+    let navLinkServices = document.querySelector(".nav-link_services");
+    let navLinkPortfolio = document.querySelector(".nav-link_portfolio");
+    let navLinkAbout = document.querySelector(".nav-link_about");
+    let navLinkContact = document.querySelector(".nav-link_contact");
+
+    if (window.pageYOffset < homeSectionHeight)
+      styleScrolledItems(navLinkHome, navLinks, "nav-link_active");
+    if (window.pageYOffset > homeSectionHeight - headerHeight)
+      styleScrolledItems(navLinkServices, navLinks, "nav-link_active");
+    if (
+      window.pageYOffset >
+      homeSectionHeight + servicesSectionHeight - headerHeight
+    )
+      styleScrolledItems(navLinkPortfolio, navLinks, "nav-link_active");
+    if (
+      window.pageYOffset >
+      homeSectionHeight +
+      servicesSectionHeight +
+      portfolioSectionHeight -
+      headerHeight
+    )
+      styleScrolledItems(navLinkAbout, navLinks, "nav-link_active");
+    if (
+      window.pageYOffset >
+      homeSectionHeight +
+      servicesSectionHeight +
+      portfolioSectionHeight +
+      aboutSectionHeight -
+      headerHeight
+    )
+      styleScrolledItems(navLinkContact, navLinks, "nav-link_active");
+  }
+
   //Slider carousel
-  let slides = document.querySelectorAll(".slide");
   let currentSlide = 0;
   let isEnabled = true;
 
@@ -69,6 +120,8 @@ document.addEventListener("DOMContentLoaded", function() {
     .addEventListener("click", function() {
       if (isEnabled) {
         setPreviousSlide(currentSlide);
+        sliderSection.classList.toggle("slider_bg_pink");
+        sliderSection.classList.toggle("slider_bg_blue");
       }
     });
 
@@ -77,6 +130,8 @@ document.addEventListener("DOMContentLoaded", function() {
     .addEventListener("click", function() {
       if (isEnabled) {
         setNextSlide(currentSlide);
+        sliderSection.classList.toggle("slider_bg_pink");
+        sliderSection.classList.toggle("slider_bg_blue");
       }
     });
 
@@ -110,13 +165,13 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   //Slider phones
-  phoneButtonYellow.addEventListener('click', function(){
-    phoneScreenYellow.classList.toggle('screen-overlay_yellow_active')
-  })
+  phoneButtonYellow.addEventListener("click", function() {
+    phoneScreenYellow.classList.toggle("screen-overlay_yellow_active");
+  });
 
-  phoneButtonBlue.addEventListener('click', function(){
-    phoneScreenBlue.classList.toggle('screen-overlay_yellow_active')
-  })
+  phoneButtonBlue.addEventListener("click", function() {
+    phoneScreenBlue.classList.toggle("screen-overlay_yellow_active");
+  });
 
   //Portfolio
   function updateProjectMarkup(project) {
@@ -135,12 +190,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let portfolioProjects = document.querySelectorAll(".portfolio__project");
     portfolioLayout.addEventListener("click", function(e) {
-      styleClickedItems(
-        "DIV",
-        portfolioProjects,
-        "portfolio__project_active",
-        e
-      );
+      styleClickedItems("DIV", portfolioProjects, "portfolio__project_active", e);
     });
   }
   updatePortfolioMarkup(projects);
@@ -157,6 +207,11 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   //Get Quote
+  getQuoteForm.onsubmit = function(e) {
+    e.preventDefault();
+    showModal();
+  };
+
   function showModal() {
     let overlay = document.createElement("div");
     overlay.classList.add("overlay");
@@ -168,7 +223,7 @@ document.addEventListener("DOMContentLoaded", function() {
     quoteStatement.classList.add("get-quote__statement");
     quoteStatement.textContent = "The letter was sent";
 
-    let formSubject = document.querySelector(".subject").value;
+    let formSubject = document.querySelector(".form__subject").value;
     let quoteTheme = document.createElement("p");
     quoteTheme.classList.add("get-quote__theme");
     if (formSubject) {
@@ -177,7 +232,7 @@ document.addEventListener("DOMContentLoaded", function() {
       quoteTheme.textContent = "Without subject ";
     }
 
-    let formDetails = document.querySelector(".details").value;
+    let formDetails = document.querySelector(".form__details").value;
     let quoteDetails = document.createElement("p");
     quoteDetails.classList.add("get-quote__details");
     if (formDetails) {
@@ -190,20 +245,18 @@ document.addEventListener("DOMContentLoaded", function() {
     closeModalButton.classList.add("button");
     closeModalButton.classList.add("button_primary");
     closeModalButton.textContent = "OK";
-    closeModalButton.addEventListener("click", hideModal);
+    closeModalButton.addEventListener("click", closeModal);
 
     modal.append(quoteStatement, quoteTheme, quoteDetails, closeModalButton);
     overlay.append(modal);
     document.body.prepend(overlay);
   }
 
-  function hideModal() {
-    let overlay = document.querySelector(".overlay");
-    overlay.remove();
+  function closeModal() {
+    document.querySelector(".overlay").remove();
+    document.querySelector(".form__name").value = "";
+    document.querySelector(".form__email").value = "";
+    document.querySelector(".form__subject").value = "";
+    document.querySelector(".form__details").value = "";
   }
-
-  getQuoteForm.onsubmit = function(e) {
-    e.preventDefault();
-    showModal();
-  };
 });

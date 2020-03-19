@@ -14,18 +14,18 @@
       <h1 class="logo">Singolo<span>*</span></h1>
       <nav class="header__nav">
         <ul class="nav-list">
-          <li class="nav-list__nav-item"><a href="#home-anchor" class="nav-link nav-link_active">Home</a></li>
-          <li class="nav-list__nav-item"><a href="#services-anchor" class="nav-link">Services</a></li>
-          <li class="nav-list__nav-item"><a href="#portfolio-anchor" class="nav-link">Portfolio</a></li>
-          <li class="nav-list__nav-item"><a href="#about-anchor" class="nav-link">About</a></li>
-          <li class="nav-list__nav-item"><a href="#contact-anchor" class="nav-link">Contact</a></li>
+          <li class="nav-list__nav-item"><a href="#home" class="nav-link nav-link_home nav-link_active">Home</a></li>
+          <li class="nav-list__nav-item"><a href="#services" class="nav-link nav-link_services">Services</a></li>
+          <li class="nav-list__nav-item"><a href="#portfolio" class="nav-link nav-link_portfolio">Portfolio</a></li>
+          <li class="nav-list__nav-item"><a href="#about" class="nav-link nav-link_about">About</a></li>
+          <li class="nav-list__nav-item"><a href="#contact" class="nav-link nav-link_contact">Contact</a></li>
         </ul>
       </nav>
     </div>
     <div class="bottom-line header__bottom-line"></div>
   </header>
 
-  <div class="slider" id="home-anchor">
+  <div class="slider slider_bg_pink" id="home">
     <div class="wrapper slider__wrapper">
       <span class="ico ico_chevron ico_chevron-left"></span>
       <div class="slide slide_pink slide_active">
@@ -47,7 +47,7 @@
   </div>
 
   <main>
-    <section class="our-services" id="services-anchor">
+    <section class="our-services" id="services">
       <div class="wrapper our-services__wrapper">
         <h2 class="our-services__heading">Our Services</h2>
         <p class="our-service__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -106,7 +106,7 @@
       <div class="bottom-line our-services__bottom-line"></div>
     </section>
 
-    <section class="portfolio" id="portfolio-anchor">
+    <section class="portfolio" id="portfolio">
       <div class="wrapper portfolio__wrapper">
         <h2 class="portfolio__heading">Portfolio</h2>
         <p class="portfolio__description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
@@ -122,7 +122,7 @@
       <div class="bottom-line portfolio__bottom-line"></div>
     </section>
 
-    <section class="about-us" id="about-anchor">
+    <section class="about-us" id="about">
       <div class="wrapper about-us__wrapper">
         <h2 class="about-us__heading">About Us</h2>
         <p class="about-us__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -167,17 +167,17 @@
       <div class="bottom-line about-us__bottom-line"></div>
     </section>
 
-    <section class="get-quote" id="contact-anchor">
+    <section class="get-quote" id="contact">
       <div class="wrapper get-quote__wrapper">
         <h2 class="get-quote__heading">Get a Quote</h2>
         <p class="get-quote__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
         <div class="layout-2-column get-quote__layout-2-column">
-          <div class="get-quote__form">
+          <div class="form get-quote__form">
             <form action="#" method="POST">
-              <input type="text" required placeholder="Name (Required)">
-              <input type="email" required placeholder="Email (Required)">
-              <input type="text" placeholder="Subject" class="subject">
-              <textarea cols="30" rows="10" placeholder="Describe your project in detail..." class="details" maxlength="390"></textarea>
+              <input type="text" required placeholder="Name (Required)" class="form__name">
+              <input type="email" required placeholder="Email (Required)" class="form__email">
+              <input type="text" placeholder="Subject" class="form__subject">
+              <textarea cols="30" rows="10" placeholder="Describe your project in detail..." class="form__details" maxlength="390"></textarea>
               <div class="get-quote__button">
                 <button type="submit" class="button button_primary">Send</button>
               </div>
