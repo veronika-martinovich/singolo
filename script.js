@@ -1,7 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
-  let navList = document.querySelector(".nav-list");
-  let navLinks = document.querySelectorAll(".nav-link");
+  let navList = document.querySelector(".nav__list");
+  let navLinks = document.querySelectorAll(".nav__link");
   let header = document.querySelector(".header");
+  let headerHamburger = document.querySelector(".header__hamburger");
+  let navHamburger = document.querySelector(".nav__hamburger");
+  let headerNav = document.querySelector(".header__nav");
   let sliderSection = document.querySelector(".slider");
   let slides = document.querySelectorAll(".slide");
   let phoneButtonYellow = document.querySelector(".button-overlay_yellow");
@@ -46,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Header
   navList.addEventListener("click", function(e) {
-    styleClickedItems("A", navLinks, "nav-link_active", e);
+    styleClickedItems("A", navLinks, "nav__link_active", e);
   });
 
   window.addEventListener("scroll", hideHeader);
@@ -73,21 +76,21 @@ document.addEventListener("DOMContentLoaded", function() {
     let portfolioSectionHeight = document.querySelector(".portfolio").offsetHeight;
     let aboutSectionHeight = document.querySelector(".about-us").offsetHeight;
 
-    let navLinkHome = document.querySelector(".nav-link_home");
-    let navLinkServices = document.querySelector(".nav-link_services");
-    let navLinkPortfolio = document.querySelector(".nav-link_portfolio");
-    let navLinkAbout = document.querySelector(".nav-link_about");
-    let navLinkContact = document.querySelector(".nav-link_contact");
+    let navLinkHome = document.querySelector(".nav__link_home");
+    let navLinkServices = document.querySelector(".nav__link_services");
+    let navLinkPortfolio = document.querySelector(".nav__link_portfolio");
+    let navLinkAbout = document.querySelector(".nav__link_about");
+    let navLinkContact = document.querySelector(".nav__link_contact");
 
     if (window.pageYOffset < homeSectionHeight)
-      styleScrolledItems(navLinkHome, navLinks, "nav-link_active");
+      styleScrolledItems(navLinkHome, navLinks, "nav__link_active");
     if (window.pageYOffset > homeSectionHeight - headerHeight)
-      styleScrolledItems(navLinkServices, navLinks, "nav-link_active");
+      styleScrolledItems(navLinkServices, navLinks, "nav__link_active");
     if (
       window.pageYOffset >
       homeSectionHeight + servicesSectionHeight - headerHeight
     )
-      styleScrolledItems(navLinkPortfolio, navLinks, "nav-link_active");
+      styleScrolledItems(navLinkPortfolio, navLinks, "nav__link_active");
     if (
       window.pageYOffset >
       homeSectionHeight +
@@ -95,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function() {
       portfolioSectionHeight -
       headerHeight
     )
-      styleScrolledItems(navLinkAbout, navLinks, "nav-link_active");
+      styleScrolledItems(navLinkAbout, navLinks, "nav__link_active");
     if (
       window.pageYOffset >
       homeSectionHeight +
@@ -104,8 +107,23 @@ document.addEventListener("DOMContentLoaded", function() {
       aboutSectionHeight -
       headerHeight
     )
-      styleScrolledItems(navLinkContact, navLinks, "nav-link_active");
+      styleScrolledItems(navLinkContact, navLinks, "nav__link_active");
   }
+
+  // Hamburger
+  headerHamburger.addEventListener('click', function() {
+    let overlay = document.createElement("div");
+    overlay.classList.add("overlay");
+    document.body.prepend(overlay);
+    headerNav.classList.remove('header__nav_disabled');
+    navHamburger.classList.add('rotation-forward');
+  })
+
+  navHamburger.addEventListener('click', function() {
+    headerNav.classList.add('header__nav_disabled');
+    navHamburger.classList.remove('rotation-forward'); 
+    document.querySelector(".overlay").remove();
+  })
 
   //Slider carousel
   let currentSlide = 0;

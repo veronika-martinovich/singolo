@@ -11,14 +11,21 @@
 
   <header class="header">
     <div class="wrapper header__wrapper">
-      <h1 class="logo">Singolo<span>*</span></h1>
-      <nav class="header__nav">
-        <ul class="nav-list">
-          <li class="nav-list__nav-item"><a href="#home" class="nav-link nav-link_home nav-link_active">Home</a></li>
-          <li class="nav-list__nav-item"><a href="#services" class="nav-link nav-link_services">Services</a></li>
-          <li class="nav-list__nav-item"><a href="#portfolio" class="nav-link nav-link_portfolio">Portfolio</a></li>
-          <li class="nav-list__nav-item"><a href="#about" class="nav-link nav-link_about">About</a></li>
-          <li class="nav-list__nav-item"><a href="#contact" class="nav-link nav-link_contact">Contact</a></li>
+      <span class="hamburger header__hamburger">
+        <span class="hamburger__line"></span>
+      </span>
+      <h1 class="logo header__logo">Singolo<span>*</span></h1>
+      <nav class="nav header__nav header__nav_disabled">
+        <span class="hamburger nav__hamburger">
+          <span class="hamburger__line"></span>
+        </span>
+        <h1 class="logo nav__logo">Singolo<span>*</span></h1>
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#home" class="nav__link nav__link_home nav__link_active">Home</a></li>
+          <li class="nav__item"><a href="#services" class="nav__link nav__link_services">Services</a></li>
+          <li class="nav__item"><a href="#portfolio" class="nav__link nav__link_portfolio">Portfolio</a></li>
+          <li class="nav__item"><a href="#about" class="nav__link nav__link_about">About</a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link nav__link_contact">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -204,7 +211,7 @@
 
   <footer class="footer">
     <div class="wrapper footer__wrapper">
-      <span>© Copyright 2013</span>
+      <span class="footer__copyright">© Copyright 2013</span>
       <div class="social-media">
         <span class="ico ico_facebook"></span>
         <span class="ico ico_google"></span>
