@@ -50,6 +50,10 @@ document.addEventListener("DOMContentLoaded", function() {
   // Header
   navList.addEventListener("click", function(e) {
     styleClickedItems("A", navLinks, "nav__link_active", e);
+    if (e.target.tagName == "A") {
+    headerNav.classList.add('header__nav_disabled')
+    }
+    document.querySelector(".overlay").remove();
   });
 
   window.addEventListener("scroll", hideHeader);
